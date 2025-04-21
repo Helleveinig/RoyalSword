@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مسؤوليات الكتيبة - قوة السيف الأجرب</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      font-family: "Cairo", sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      background-color: rgba(0, 61, 41, 0.8);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .marquee {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      animation: marquee 12s linear infinite;
+      direction: ltr;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    nav {
+      position: fixed;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      padding: 35px 0;
+      background: rgba(0, 61, 41, 0.8);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #006b3f;
+    }
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 220px;
+      padding: 40px 20px 100px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .box {
+      background: rgba(0, 61, 41, 0.85);
+      color: white;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .box-content {
+      display: none;
+      margin-top: 15px;
+      font-size: 16px;
+      text-align: right;
+      color: #fff;
+    }
+
+    .box.active .box-content {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="marquee">
+      『 ♕ ⚔ The Power Of Royale Sword -  قـوة الـسـيـف الاجـرب ⚔ ♕ 』
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="tasks.html">مسؤوليات الكتيبة</a>
+    <a href="uniforms.html">ملابس الكتيبة</a>
+    <a href="vehicles.html">مركبات الكتيبة</a>
+    <a href="other.html">أخرى</a>
+  </nav> 
+
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="sound/mediaTasks.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container">
+      <div class="column">
+        <div class="box" onclick="toggleBox(this)">قائد الموكب<div class="box-content">وهو المسؤول عن قيادة الموكب وابلاغ عموم الموكب باي مستجدات مثال :الموكب يلتف , يستوقف الموكب</div></div>
+        <div class="box" onclick="toggleBox(this)">وحده تامين الموكب<div class="box-content">يتم اختيار من 3 الى 4 اشخاص ومسؤوليتهم تامين الموكب واغلاق الطرق من اي خطر وفي حال اقتراب اي شخص من الموكب يحق له طلق النار بشكل فوري </div></div>
+        <div class="box" onclick="toggleBox(this)">الوحده الجويه<div class="box-content">يتم اختيار 2 بحيث يكون مسؤولية الوحده الجويه بالكامل لهم وتنبيه قائد الموكب اول باول</div></div>
+        <div class="box" onclick="toggleBox(this)">حماية الشخصيات<div class="box-content">يتم اختيار 2 من الفرقه بحيث يكون مرافقين للشخصيات الهامه وحمايتهم</div></div>
+      </div>
+
+      <div class="column">
+        <div class="box" onclick="toggleBox(this)">مسؤول القبول<div class="box-content">وهو المسؤول عن قبول الاعلانات</div></div>
+        <div class="box" onclick="toggleBox(this)">مسؤول التصوير<div class="box-content">وهو المسؤول عن اخذ الصور وتنزيلها في السيناريوهات</div></div>
+        <div class="box" onclick="toggleBox(this)">مسؤول التحضير<div class="box-content">في حال التفعيل يتم تحضير العموم وارسالهم في شات الفرقه</div></div>
+        <div class="box" onclick="toggleBox(this)">مسؤول التحرير<div class="box-content">وهو المسؤول الاول عن تنزيل اعلانات التحرير</div></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleBox(element) {
+      document.querySelectorAll(".box").forEach(box => {
+        if (box !== element) box.classList.remove("active");
+      });
+      element.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

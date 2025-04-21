@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة جديدة - قوة السيف الأجرب</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      font-family: "Cairo", sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      background-color: rgba(0, 61, 41, 0.8);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .marquee {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      animation: marquee 12s linear infinite;
+      direction: ltr;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    nav {
+      position: fixed;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      padding: 35px 0;
+      background: rgba(0, 61, 41, 0.8);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #006b3f;
+    }
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .empty-container {
+      margin-top: 220px;
+      padding: 40px 20px 100px;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="marquee">
+      『 ♕ ⚔ The Power Of Royale Sword -  قـوة الـسـيـف الاجـرب ⚔ ♕ 』
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="tasks.html">مسؤوليات الكتيبة</a>
+    <a href="uniforms.html">ملابس الكتيبة</a>
+    <a href="vehicles.html">مركبات الكتيبة</a>
+    <a href="other.html">أخرى</a>
+  </nav>  
+
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="sound/mediaOthers.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="empty-container">
+      <!-- محتوى إضافي ممكن تضيفه هنا مستقبلاً -->
+    </div>
+  </div>
+</body>
+</html>

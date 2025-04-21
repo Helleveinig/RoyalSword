@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ملابس الكتيبة</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      font-family: "Cairo", sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      background-color: rgba(0, 61, 41, 0.8);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .marquee {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      animation: marquee 12s linear infinite;
+      direction: ltr;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    nav {
+      position: fixed;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      padding: 35px 0;
+      background: rgba(0, 61, 41, 0.8);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #006b3f;
+    }
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 220px;
+      padding: 40px 20px 100px;
+    }
+
+    .note {
+      background: rgba(0, 61, 41, 0.8);
+      color: white;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      width: 95%;
+      max-width: 1000px;
+      padding: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s;
+      font-size: 20px;
+    }
+
+    .note:hover {
+      transform: scale(1.02);
+    }
+
+    .note-content {
+      display: none;
+      color: #fff;
+      padding-top: 10px;
+      font-size: 18px;
+      text-align: right;
+    }
+
+    .note.active .note-content {
+      display: block;
+    }
+
+    .square-box {
+      background: rgba(0, 61, 41, 0.8);
+      color: white;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 300px;
+      padding: 20px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+    }
+
+    .square-box:hover {
+      transform: scale(1.05);
+    }
+
+    .square-box-content {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .square-box.active .square-box-content {
+      display: block;
+    }
+
+    .square-box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .marquee {
+        font-size: 16px;
+      }
+
+      nav {
+        font-size: 16px;
+        gap: 15px;
+      }
+
+      .note {
+        font-size: 18px;
+        padding: 20px;
+        max-width: 90%;
+      }
+
+      .note-content {
+        font-size: 16px;
+      }
+
+      .square-box {
+        width: 90%;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="marquee">
+      『 ♕ ⚔ The Power Of Royale Sword -  قـوة الـسـيـف الاجـرب ⚔ ♕ 』
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="tasks.html">مسؤوليات الكتيبة</a>
+    <a href="uniforms.html">ملابس الكتيبة</a>
+    <a href="vehicles.html">مركبات الكتيبة</a>
+    <a href="other.html">أخرى</a>
+  </nav> 
+  
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="sound/mediaUN.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container">
+      <!-- مربعات الملابس -->
+      <div class="square-box" onclick="toggleSquareBox(this)">
+        <strong>لبس قادة الفرقة</strong>
+        <div class="square-box-content">
+          <img src="images/images3.png" alt="صورة الزي الرسمي">
+          <p>ويستخدم لقادة الفرقه والقطاع في حال التفعيل</p>
+        </div>
+      </div>
+
+      <div class="square-box" onclick="toggleSquareBox(this)">
+        <strong>لبس حماية الشخصيات</strong>
+        <div class="square-box-content">
+          <img src="images/imges4.png" alt="صورة ملابس التدريب">
+          <p>ويستخدم لمرافقة العائلة الحاكمة ورئاسة الوزراء</p>
+        </div>
+      </div>
+
+      <div class="square-box" onclick="toggleSquareBox(this)">
+        <strong>لبس التفعيل</strong>
+        <div class="square-box-content">
+          <img src="images/images5.png" alt="صورة ملابس الطوارئ">
+          <p>ويستخدم في حال التفعيل للمداهمة الاماكن المشبوهه والتامين</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSquareBox(element) {
+      document.querySelectorAll(".square-box").forEach(box => {
+        if (box !== element) box.classList.remove("active");
+      });
+      element.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

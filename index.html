@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قوة السيف الأجرب</title>
+
+  <!-- Meta Preview Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://helleveinig.github.io/RoyalSword/">
+  <meta property="og:title" content="قوة السيف الأجرب">
+  <meta property="og:description" content="كل ماتريد معرفته عن فرقة السيف الاجرب">
+  <meta property="og:image" content="https://helleveinig.github.io/RoyalSword/images/RoyalSowrdPower.png" />
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://helleveinig.github.io/RoyalSword/">
+  <meta property="twitter:title" content="قوة السيف الأجرب">
+  <meta property="twitter:description" content="كل ماتريد معرفته عن فرقة السيف الاجرب">
+  <meta property="twitter:image" content="https://helleveinig.github.io/RoyalSword/images/RoyalSowrdPower.png">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+      font-family: "Cairo", sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      background-color: rgba(0, 61, 41, 0.8);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .marquee {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      animation: marquee 12s linear infinite;
+      direction: ltr;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    nav {
+      position: fixed;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      padding: 35px 0;
+      background: rgba(0, 61, 41, 0.8);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #006b3f;
+    }
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-top: 220px;
+      padding: 40px 20px 100px;
+    }
+
+    .note {
+      background: rgba(0, 61, 41, 0.8);
+      color: white;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      width: 95%;
+      max-width: 1000px;
+      padding: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s;
+      font-size: 20px;
+    }
+
+    .note:hover {
+      transform: scale(1.02);
+    }
+
+    .note-content {
+      display: none;
+      color: #fff;
+      padding-top: 10px;
+      font-size: 18px;
+      text-align: right;
+    }
+
+    .note.active .note-content {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .marquee {
+        font-size: 16px;
+      }
+
+      nav {
+        font-size: 16px;
+        gap: 15px;
+      }
+
+      .note {
+        font-size: 18px;
+        padding: 20px;
+        max-width: 90%;
+      }
+
+      .note-content {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="marquee">
+      『 ♕ ⚔ The Power Of Royale Sword -  قـوة الـسـيـف الاجـرب ⚔ ♕ 』
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="tasks.html">مسؤوليات الكتيبة</a>
+    <a href="uniforms.html">ملابس الكتيبة</a>
+    <a href="vehicles.html">مركبات الكتيبة</a>
+    <a href="other.html">أخرى</a>
+  </nav> 
+
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="sound/mediaIndex.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="container">
+      <div class="note" onclick="toggleNote(this)">
+        <strong>تعريف الفرقة</strong>
+        <div class="note-content">
+          فرقة السيف الاجرب وهي تعتبر من الفرق الاحترافية التابعة للحرس الملكي والتي تتمثل أعمالها في حماية الأسرة الحاكمة ومرافقة رئاسة الوزراء ومكافحة الإرهاب وردع كل متطرف.
+        </div>
+      </div>
+    
+      <div class="note" onclick="toggleNote(this)">
+        <strong>تعميمات الفرقة</strong>
+        <div class="note-content">
+          <ol>
+            <li>يمنع تفعيل القوة إلا في حال اكتمال أغلب العدد للفرقة أو حين شن الغارات وطلب الدعم.</li>
+            <li>المرافقة للعائلة الحاكمة ورئاسة الوزراء أثناء المواكب والزيارات الملكية والهدف حمايتهم.</li>
+            <li>لا يحق محاسبة أفراد الفرقة إلا رئيس الحرس ونائبه أو رئيس فرقة السيف الأجرب ونائبه.</li>
+            <li>في حال عدم تفاعلك خلال يومين سيتم استثناؤك من فرقة السيف الأجرب، يلزم التواجد يومياً 5 ساعات فأعلى.</li>
+            <li>في حال نسخ اللبس الخاص لفرقة السيف الأجرب أو لبسه من الأفراد أو الضباط خارج الفرقة: إنزال رتبة.</li>
+            <li>في حال المداهمة وإطلاق النار على عسكري يتم استثناؤك من فرقة السيف الأجرب.</li>
+            <li>في حال تم خطفك تستثنى من فرقة السيف الأجرب وتحذير وظيفي.</li>
+            <li>يتم اختيار أعضاء فرقة السيف الأجرب حسب الأقوى في: الإيم، قيادة المواكب الأرضية والجوية، والتفاعل.</li>
+            <li>يمنع منعاً باتاً إعدام أي شخص إلا في حضور قائد الفرقة أو النائب أو مسؤول الفرقة ويكون في غضون التفعيل.</li>
+          </ol>
+        </div>
+      </div>
+    
+      <div class="note" onclick="toggleNote(this)">
+        <strong>المواكب الرسمية</strong>
+        <div class="note-content">
+          <p>1- الموكب الطولي ويستخدم في حالات التمشيط.</p>
+          <p>2- موكب حماية الشخصيات المهمة مثال (الحاكم).</p>
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+            <img src="images/images1.png" alt="صورة موكب 1" style="border-radius: 12px; width: 360px; height: 220px;">
+            <img src="images/images2.png" alt="صورة موكب 2" style="border-radius: 12px; width: 360px; height: 220px;">
+          </div>
+        </div>
+      </div>
+    
+      <div class="note" onclick="toggleNote(this)">
+        <strong>مميزات الفرقة</strong>
+        <div class="note-content">
+          <ul>
+            <li>في حال التفعيل يتم احتساب سيناريوهين لكل سيناريو.</li>
+            <li>الأولوية للمشاركة في البطولات الوزارية.</li>
+            <li>صرف بوينتات ونقاط لعموم المشاركين في الفرقة كل فترة.</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="note" onclick="toggleNote(this)">
+        <strong>قادة السيف الأجرب</strong>
+        <div class="note-content" style="text-align: right;">
+          <p style="font-weight: bold; font-size: 20px;">رئــاســة قوة الــســيــف الاجــرب</p>
+          <div style="display: flex; justify-content: space-between;">
+            <span>FY ♕ ART 102</span> <span>[ سـيـف - 0 ]</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>FY ♕ NAWAF 55555</span> <span>[ سـيـف - 1 ]</span>
+          </div>
+    
+          <p style="font-weight: bold; font-size: 20px; margin-top: 20px;">قادة قطاع الحرس الملكي</p>
+          <div style="display: flex; justify-content: space-between;">
+            <span>FY ⚔ ALENEZI 20</span> <span>[ D-0 ]</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>FY ⚔ d7omzh 702</span> <span>[ D-1 ]</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>FY ⚔ ALAAX 6887</span> <span>[ D-2 ]</span>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+  <script>
+    function toggleNote(element) {
+      document.querySelectorAll(".note").forEach(note => {
+        if (note !== element) note.classList.remove("active");
+      });
+      element.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
